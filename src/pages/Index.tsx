@@ -30,15 +30,15 @@ const Index = () => {
         onCategoryChange={setActiveCategory}
       />
       
-      <section className="container pb-20">
+      <section className="container pb-12 md:pb-16 lg:pb-20 px-4 md:px-6">
         {filteredMovies.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center py-12 md:py-16 lg:py-20">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
               Nenhum filme encontrado. Tente outra busca.
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4 lg:gap-6">
             {filteredMovies.map((movie) => (
               <MovieCard
                 key={movie.id}
